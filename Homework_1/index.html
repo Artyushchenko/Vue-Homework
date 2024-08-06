@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vue JS | HW #1</title>
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+	<section id='root'>
+		<!-- TASK #3 -->
+		<!-- Виведення значення змінної на сторінці. -->
+		<div class='container'>
+			<h1>Лічільник: {{counter}}</h1>
+
+			<!-- TASK 4 -->
+			<!-- Створення кнопок, які будуть змінювати значення змінної в об'єкті Vue при кожному кліку. -->
+			<div class='buttons'>
+				<!-- TASK #8 -->
+				<!-- Використання обробників подій, які реагують на події кліку та змінюють стан об'єкта Vue. -->
+				<button class='inc' @click='increment'>+</button>
+				<button class='dec' @click='decrement'>-</button>
+			</div>
+		</div>
+
+		<!-- TASK #5 -->
+		<!-- Реєстрація кастомного компонента у проекті. -->
+		<my-component></my-component>
+
+		<form-component></form-component>
+	</section>
+
+	<section id='secondary-root'>
+		<h1>Лічильник: {{secondaryCounter}}</h1>
+		<button @click='increaseCount'>Збільшити показник</button>
+	</section>
+
+	<!-- TASK #1 -->
+	<!-- Підключення Vue 3 до існуючого проекту, використовуючи CDN - посилання. -->
+	<script src="https://unpkg.com/vue@3.2.36"></script>
+
+	<!-- Підключення vue3-sfc-loader через CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
